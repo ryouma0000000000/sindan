@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>診断スタート</title>
+    </head>
+
+    
+    <body>
+         
+    
+     
+
+
+      <%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        
+        <header>
+            <h1 class="headline">
+            <a> この人こんな人</a>
+            </h1>
+            <ul class="nav-list">
+                
+            </ul>
+        </header>
+
+             
+              
+
+
+
+
+
+
+
+
+            
+        <div class="start">
+           
+                   
+                       <h6>診断を始めるを押してください。</h6>
+                  <div>
+                      <%= link_to "診断を始める", new_perfume_path, class: "link" %>
+
+                  <div>
+          
+           
+        </div>
+
+       
+
+
+
+        <h1>過去の結果</h1>
+
+       <% if user_signed_in? && current_user.admin? %>
+          <% @perfumes.each do |perfume| %>
+            <div class="perfume-item">
+              <% if current_user.id == perfume.user_id %>
+                <% perfume.perfume_results.each do |result| %>
+                  <p><%= result.content %></p>
+                <% end %>
+              <% end %>
+              <%= link_to '詳細を見る', perfume_path(perfume), class: 'btn btn-secondary' %>
+            </div>
+          <% end %>
+        <% else %>
+          <p>ログインしてください。</p>
+        <% end %>
+
+
+
+        
+      
+
+
+
+
+
+
+
+
+
+       
+           
+
+
+
+
+    </body>
+   
+</html>

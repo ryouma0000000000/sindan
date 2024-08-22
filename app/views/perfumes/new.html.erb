@@ -1,0 +1,103 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="row">
+           
+            
+        <div class="col-12">
+        <p>Question1. 学校行事のテンションは…</p>
+         </div>
+         <div class="col-6">
+          <p><%= f.check_box :question, {multiple: true}, "1", nil %>100%</p>
+         </div>
+         <div class="col-6">
+          <p><%= f.check_box :question, {multiple: true}, "2", nil %>70%</p>
+         </div>
+         <div class="col-6">
+          <p><%= f.check_box :question, {multiple: true}, "3", nil %>50%</p>
+         </div>
+         <div class="col-6">
+          <p><%= f.check_box :question, {multiple: true}, "4", nil %>30%</p>
+         </div>
+
+     
+    
+         <div class="col-12">
+           <p>Question2. 裏ではどんな人？…</p>
+         </div>
+         <div class="col-6">
+           <p><%= f.check_box :question, {multiple: true}, "1", nil %>めっちゃうるさい</p>
+         </div>
+         <div class="col-6">
+           <p><%= f.check_box :question, {multiple: true}, "2", nil %>家では一言ももしゃべらない</p>
+         </div>
+         <div class="col-6">
+           <p><%= f.check_box :question, {multiple: true}, "3", nil %>ギャグセンスありそう</p>
+         </div>
+         <div class="col-6">
+           <p><%= f.check_box :question, {multiple: true}, "4", nil %>常識人そう</p>
+         </div>
+         <div class="col-6">
+           <p><%= f.check_box :question, {multiple: true}, "5", nil %>悪いグループにいそう</p>
+         </div>    
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "6", nil %>裏も表もなさそう</p>
+         </div>
+           
+
+         <div class="col-12">
+             <p>Question3. 会社の上司だったら？…</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "1", nil %>女神枠</p>
+         </div> 
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "2", nil %>厳しいけど面倒見よさそう</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "3", nil %>優しいけどあんま助けてくれなさそう</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "4", nil %>後輩からなめられてそう</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "5", nil %>面白い人だけどいつも怒られてそう</p>
+         </div>    
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "6", nil %>あんま後輩好きじゃなさそう</p>
+         </div>
+
+
+         <div class="col-12">
+             <p>Question3. 兄弟構成は？…</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "1", nil %>一人っ子</p>
+         </div> 
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "2", nil %>長子</p>
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "3", nil %>中間子</p> 
+         </div>
+         <div class="col-6">
+             <p><%= f.check_box :question, {multiple: true}, "4", nil %>末っ子</p>
+         </div>
+
+
+  
+   
+   
+   
+
+
+
+
+        </div>
+    </div>
+    <div class="sindanbotan">
+       <%= f.submit "post" %> 
+    </div>
+<% end %>
+
+<div class="back-button">
+  <%= link_to "戻る", perfumes_path, class: "btn btn-secondary" %>
+</div> 

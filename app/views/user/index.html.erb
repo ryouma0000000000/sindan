@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>診断スタート</title>
+    </head>
+
+      
+
+    
+    <body>
+
+      <%= link_to "ログイン", perfumes_path %>
+
+
+      <%= link_to "新規登録", new_user_registration_path %>
+      
+     
+          
+      
+         
+
+           
+               
+
+        
+        <header>
+            <h1 class="headline">
+            <a> この人こんな人</a>
+        </header>
+
+
+        <h3>検索</h3>
+        <%= form_tag({controller:"user",action:"index"}, method: :get) do %>
+          <%= text_field_tag :name, params[:name], placeholder: "名前で検索" %>
+          <%= submit_tag '検索する'  %>
+        <% end %>
+
+
+
+
+
+
+
+        <header>
+        <h2>名前を投稿</h2>
+    </header>
+  
+    <%= form_with model: @name, local: true do |form| %>
+      <div>
+        <%= form.label :name, "名前:" %>
+        <%= form.text_field :name %>
+      </div>
+      <div>
+        <%= form.submit "投稿する" %>
+      </div>
+    <% end %>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html>

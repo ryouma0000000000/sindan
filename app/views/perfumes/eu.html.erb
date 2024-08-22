@@ -1,0 +1,9 @@
+<div class="start">
+        <h6>診断を始める前に、名前を入力してください。</h6>
+
+        <!-- フォームの開始 -->
+        <%= form_with(url: perfumes_path, method: :post, local: true) do %>
+            <div>
+                <%= label_tag :name, "名前:" %>
+                <%= text_field_tag :name, params[:name], class: "input" %>
+            </div>
